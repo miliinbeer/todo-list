@@ -22,7 +22,6 @@ export const GlobalStyles = createGlobalStyle`
   outline-offset: 0;
 }
 button {
-  cursor: pointer;
   border: none;
   background: none;
 }

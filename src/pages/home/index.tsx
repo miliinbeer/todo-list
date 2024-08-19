@@ -7,7 +7,7 @@ export const Home: FunctionComponent = () => {
     <Root>
       <Title>To Do List</Title>
       <Items>
-        <InputWidget/>
+        <InputWidget />
       </Items>
     </Root>
   );
