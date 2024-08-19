@@ -12,4 +12,25 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  input:focus::-webkit-input-placeholder {
+  color: transparent;
+  transition: all 0.5s;
+}
+:focus {
+  outline: none;
+  outline-offset: 0;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+`;
+
+export const Container = styled.div`
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 auto;
+  border: 1px red solid;
 `;

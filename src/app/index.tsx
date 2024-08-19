@@ -1,13 +1,15 @@
 import React from "react";
 import { Home } from "../pages/home";
-import { GlobalStyles } from "./styles";
+import { GlobalStyles, Container } from "./styles";
 import "../shared/fonts/fonts.css";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Home />
+      <Container>
+        <Home />
+      </Container>
     </>
   );
 }
