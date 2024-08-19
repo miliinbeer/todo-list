@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
-export const InputContainer = styled.div`
-  max-width: 700px;
-  margin: 0 auto;
-`;
-
 export const Input = styled.input`
+  max-width: 700px;
   width: 100%;
   padding: 5px 10px;
   color: black;
@@ -15,7 +11,7 @@ export const Input = styled.input`
   line-height: 40px;
   text-align: center;
   border: 2px black solid;
-  /* border-right: none; */
+  border-right: none;
   background: transparent;
 
   &::placeholder {
