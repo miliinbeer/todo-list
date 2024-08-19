@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-  max-width: 700px;
+  max-width: 500px;
   width: 100%;
   padding: 5px 10px;
   color: black;
@@ -15,8 +15,17 @@ export const Input = styled.input`
   background: transparent;
 
   &::placeholder {
+    padding-left: 3rem;
     font-size: 15px;
     font-family: "Inter", sans-serif;
     letter-spacing: 0;
+  }
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+    transition: all 0.5s;
+  }
+  &:focus {
+    outline: none;
+    outline-offset: 0;
   }
 `;
