@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Root = styled.div`
-
-`;
+export const Root = styled.div``;
 
 export const Title = styled.h1`
   height: 25vh;
@@ -14,5 +12,6 @@ export const Title = styled.h1`
 `;
 
 export const Items = styled.div`
- 
+  display: flex;
+  justify-content: center;
 `;
