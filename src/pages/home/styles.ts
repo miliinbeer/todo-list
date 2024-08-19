@@ -5,7 +5,14 @@ export const Root = styled.div`
 `;
 
 export const Title = styled.h1`
-  text-align: center;
+  height: 25vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   font-family: "LemonTuesday", sans-serif;
-  font-size: 60px;
+  font-size: 70px;
 `;
+
+export const Items = styled.div`
+
+`
