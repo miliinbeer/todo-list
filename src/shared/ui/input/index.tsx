@@ -5,14 +5,17 @@ import { Input } from "./styles";
 export const InputWidget: FunctionComponent<InputProps> = ({
   onChange,
   onKeyDown,
-  value,
+  // value,
   type,
   placeholder,
+  props
 }) => {
   return (
     <Input
+      {...props}
       onChange={onChange}
       onKeyDown={onKeyDown}
+      // value={value}
       type={type}
       placeholder={placeholder}
     />
