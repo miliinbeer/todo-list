@@ -6,8 +6,8 @@ export interface ButtonProps {
 }
 
 export interface InputStyledProps {
-  maxWidth: string;
-  borderRight: string;
+  $maxwidth: string;
+  $borderright: string;
 }
 
 export interface InputProps {
