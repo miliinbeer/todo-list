@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent } from "react";
 import { Root, Title, Items } from "./styles";
 import { InputWidget } from "../../shared/ui/input";
 import { ButtonWidget } from "../../shared/ui/button";
@@ -9,7 +9,7 @@ export const Home: FunctionComponent = () => {
       <Title>To Do List</Title>
       <Items>
         <InputWidget
-          props={{ maxWidth: "500px", borderRight: "none" }}
+          props={{ $maxwidth: "500px", $borderright: "none" }}
           onChange={() => {}}
           onKeyDown={() => {}}
           value=""

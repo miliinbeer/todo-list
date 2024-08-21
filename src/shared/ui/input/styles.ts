@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { InputStyledProps } from "../../types";
 
 export const Input = styled.input<InputStyledProps>`
-  max-width: ${props => props.maxWidth};
+  max-width: ${(props) => props.$maxwidth};
   width: 100%;
   padding: 5px 20px;
   color: black;
@@ -11,7 +11,7 @@ export const Input = styled.input<InputStyledProps>`
   letter-spacing: 3px;
   line-height: 40px;
   border: 2px black solid;
-  border-right: ${props => props.borderRight};
+  border-right: ${(props) => props.$borderright};
   background: transparent;
 
   &::placeholder {
