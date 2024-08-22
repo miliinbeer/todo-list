@@ -12,8 +12,7 @@ export interface ButtonProps {
 }
 
 export interface InputStyledProps {
-  $maxwidth: string;
-  $borderright: string;
+  $primary?: boolean;
 }
 
 export interface InputProps {
@@ -22,5 +21,5 @@ export interface InputProps {
   value: string;
   type: string;
   placeholder: string;
-  props: InputStyledProps;
+  props?: InputStyledProps;
 }
