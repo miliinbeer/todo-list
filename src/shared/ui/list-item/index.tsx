@@ -1,26 +1,27 @@
 import React, { FunctionComponent } from "react";
+import { ListItemProps } from "../../types";
 import { CheckboxWidget } from "../checkbox";
-import {
-  Root,
-  Items,
-  Texts,
-  Edditor,
-  Cross,
-  Buttons,
-} from "./styles";
+import { ButtonWidget } from "../button";
+import { Root, Items, Texts, Buttons } from "./styles";
 
-export const ListItemWidget: FunctionComponent = () => {
+export const ListItemWidget: FunctionComponent<ListItemProps> = ({ text }) => {
   return (
     <Root>
       <Items>
         <CheckboxWidget />
-        <Texts>
-          fkdmvklmdfklvmflkdmvkldfmlkvmdfsklvmdfskvfdklsmvfklsm
-        </Texts>
+        <Texts>{text}</Texts>
       </Items>
       <Buttons>
-        <Edditor />
-        <Cross onClick={() => {}}>×</Cross>
+        <ButtonWidget
+          props={{ $edditor: true }}
+          onClick={() => {}}
+          children=""
+        />
+        <ButtonWidget
+          props={{ $cross: true }}
+          onClick={() => {}}
+          children="×"
+        />
       </Buttons>
     </Root>
   );

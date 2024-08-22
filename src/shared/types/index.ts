@@ -24,3 +24,7 @@ export interface InputProps {
   placeholder: string;
   props?: InputStyledProps;
 }
+
+export interface ListItemProps {
+text: string
+}
