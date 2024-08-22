@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import { Root, Title, Items } from "./styles";
 import { InputWidget } from "../../shared/ui/input";
 import { ButtonWidget } from "../../shared/ui/button";
+import { ListItemWidget } from "../../shared/ui/list-item";
 
 export const Home: FunctionComponent = () => {
   return (
@@ -22,6 +23,7 @@ export const Home: FunctionComponent = () => {
           children="Write"
         />
       </Items>
+      <ListItemWidget />
     </Root>
   );
 };

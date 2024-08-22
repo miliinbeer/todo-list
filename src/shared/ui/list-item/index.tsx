@@ -15,7 +15,7 @@ export const ListItemWidget: FunctionComponent = () => {
       <Items>
         <CheckboxWidget />
         <Texts>
-          <span>Loreelwafkmkjnfkjdnjnadjknajknvkjfandjkvnafjkvnfjakdnk</span>
+          fkdmvklmdfklvmflkdmvkldfmlkvmdfsklvmdfskvfdklsmvfklsm
         </Texts>
       </Items>
       <Buttons>

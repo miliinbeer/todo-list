@@ -8,7 +8,7 @@ export interface ButtonStyledProps {
 export interface ButtonProps {
   onClick: () => void;
   children: string;
-  props: ButtonStyledProps
+  props?: ButtonStyledProps
 }
 
 export interface InputStyledProps {

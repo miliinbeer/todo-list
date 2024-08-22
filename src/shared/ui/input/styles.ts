@@ -28,7 +28,6 @@ export const Input = styled.input<InputStyledProps>`
   ${(props) =>
     props.$primary &&
     css`
-      max-width: 500px;
       border-right: none;
     `}
 `;

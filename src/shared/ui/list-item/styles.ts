@@ -16,14 +16,9 @@ export const Items = styled.div`
   display: flex;
 `;
 
-export const Texts = styled.div`
-  margin-left: 2rem;
-  overflow-x: scroll;
-
-  &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
+export const Texts = styled.span`
+  margin: 0px 10px 0 25px;
+  word-break: break-all;
 `;
 
 export const Buttons = styled.div`
