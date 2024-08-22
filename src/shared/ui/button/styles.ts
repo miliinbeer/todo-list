@@ -1,8 +1,11 @@
 import styled, { css } from "styled-components";
 import { ButtonStyledProps } from "../../types";
+import edditor from "../../images/icon.webp";
 
 export const Button = styled.button<ButtonStyledProps>`
   cursor: pointer;
+  border: none;
+  background-color: transparent;
   ${(props) =>
     props.$primary &&
     css`
@@ -11,13 +14,11 @@ export const Button = styled.button<ButtonStyledProps>`
       font-size: 15px;
       font-family: "LemonTuesday", sans-serif;
       letter-spacing: 5px;
-      border: none;
       border: 2px black solid;
       background-color: black;
       transition: all 0.5s;
       &:hover {
         color: black;
-        background-color: transparent;
         transition: all 0.5s;
       }
     `}
@@ -30,7 +31,13 @@ export const Button = styled.button<ButtonStyledProps>`
       align-items: center;
       justify-content: center;
       font-size: 40px;
-      border: none;
-      background: transparent;
+    `}
+      ${(props) =>
+    props.$edditor &&
+    css`
+      width: 25px;
+      height: 25px;
+      background-image: url(${edditor});
+      background-size: cover;
     `}
 `;
