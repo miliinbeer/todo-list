@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { CheckboxWidget } from "../checkbox";
 import {
   Root,
   Items,
@@ -12,6 +13,7 @@ export const ListItemWidget: FunctionComponent = () => {
   return (
     <Root>
       <Items>
+        <CheckboxWidget />
         <Texts>
           <span>Loreelwafkmkjnfkjdnjnadjknajknvkjfandjkvnafjkvnfjakdnk</span>
         </Texts>
