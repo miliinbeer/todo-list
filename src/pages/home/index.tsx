@@ -16,7 +16,11 @@ export const Home: FunctionComponent = () => {
           type="text"
           placeholder="Введите вашу задачу"
         />
-        <ButtonWidget onClick={() => {}} children="Write" />
+        <ButtonWidget
+          props={{ $primary: true }}
+          onClick={() => {}}
+          children="Write"
+        />
       </Items>
     </Root>
   );

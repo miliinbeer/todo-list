@@ -1,8 +1,14 @@
 import React from "react";
 
+export interface ButtonStyledProps {
+  $primary?: boolean;
+  $cross?: boolean
+}
+
 export interface ButtonProps {
   onClick: () => void;
   children: string;
+  props: ButtonStyledProps
 }
 
 export interface InputStyledProps {
