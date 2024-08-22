@@ -9,7 +9,7 @@ export const Home: FunctionComponent = () => {
       <Title>To Do List</Title>
       <Items>
         <InputWidget
-          props={{ $maxwidth: "500px", $borderright: "none" }}
+          props={{ $primary: true }}
           onChange={() => {}}
           onKeyDown={() => {}}
           value=""
