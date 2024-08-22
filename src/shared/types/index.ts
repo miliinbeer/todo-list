@@ -3,6 +3,7 @@ import React from "react";
 export interface ButtonStyledProps {
   $primary?: boolean;
   $cross?: boolean
+  $edditor?: boolean
 }
 
 export interface ButtonProps {
