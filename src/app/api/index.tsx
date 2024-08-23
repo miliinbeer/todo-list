@@ -5,7 +5,6 @@ const rootReducer = createSlice({
   name: "data",
   initialState: {
     data: [],
-    value: "",
   },
   reducers: {
     addTask: (state: StateTypes, action) => {
@@ -16,11 +15,8 @@ const rootReducer = createSlice({
       };
       state.data.push(todo);
     },
-    handleInput: (state, action) => {
-      state.value = action.payload;
-    },
   },
 });
 
 export default rootReducer.reducer;
-export const { addTask, handleInput } = rootReducer.actions;
+export const { addTask } = rootReducer.actions;

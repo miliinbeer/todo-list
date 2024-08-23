@@ -1,7 +1,11 @@
-import React, { FunctionComponent, ChangeEvent } from "react";
+import React, {
+  FunctionComponent,
+  ChangeEvent,
+  useState,
+} from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { addTask, handleInput } from "../../app/api";
+import { addTask } from "../../app/api";
 import { AppDispatch, DataTypes, StateDataTypes } from "../../shared/types";
 import { InputWidget } from "../../shared/ui/input";
 import { ButtonWidget } from "../../shared/ui/button";
@@ -9,12 +13,19 @@ import { ListItemWidget } from "../../shared/ui/list-item";
 import { Root, Title, Items, List } from "./styles";
 
 export const Home: FunctionComponent = () => {
+  const [value, setValue] = useState("");
+
   const dispatch: AppDispatch = useDispatch();
-  const { data, value } = useSelector((state: StateDataTypes) => state.root);
+  const { data } = useSelector((state: StateDataTypes) => state.root);
+
+  const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
 
   const addTodo = () => {
     if (value.trim().length) {
       dispatch(addTask({ text: value }));
+      setValue("");
     }
   };
 
@@ -26,11 +37,9 @@ export const Home: FunctionComponent = () => {
       <Items>
         <InputWidget
           props={{ $primary: true }}
-          onChange={(event: ChangeEvent<HTMLInputElement>) =>
-            dispatch(handleInput(event.target.value))
-          }
+          onChange={handleInput}
           onKeyDown={() => {}}
-          value=""
+          value={value}
           type="text"
           placeholder="Введите вашу задачу"
         />

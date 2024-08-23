@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import { store } from "../../app/store";
 
 export type AppDispatch = typeof store.dispatch;
@@ -11,13 +11,11 @@ export interface DataTypes {
 
 export interface StateTypes {
   data: DataTypes[];
-  value: string;
 }
 
 export interface StateDataTypes {
   root: {
     data: DataTypes[];
-    value: string;
   };
 }
 
@@ -38,7 +36,7 @@ export interface InputStyledProps {
 }
 
 export interface InputProps {
-  onChange: any;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onKeyDown: () => void;
   value: string;
   type: string;
