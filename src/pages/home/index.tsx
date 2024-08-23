@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { Root, Title, Items } from "./styles";
 import { InputWidget } from "../../shared/ui/input";
 import { ButtonWidget } from "../../shared/ui/button";
+import { Root, Title, Items } from "./styles";
 
 export const Home: FunctionComponent = () => {
   return (

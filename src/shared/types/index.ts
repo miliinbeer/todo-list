@@ -1,15 +1,36 @@
 import React from "react";
+import { store } from "../../app/store";
+
+export type AppDispatch = typeof store.dispatch;
+
+export interface DataTypes {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+export interface StateTypes {
+  data: DataTypes[];
+  value: string;
+}
+
+export interface StateDataTypes {
+  root: {
+    data: DataTypes[];
+    value: string;
+  };
+}
 
 export interface ButtonStyledProps {
   $primary?: boolean;
-  $cross?: boolean
-  $edditor?: boolean
+  $cross?: boolean;
+  $edditor?: boolean;
 }
 
 export interface ButtonProps {
   onClick: () => void;
   children: string;
-  props?: ButtonStyledProps
+  props?: ButtonStyledProps;
 }
 
 export interface InputStyledProps {
@@ -17,7 +38,7 @@ export interface InputStyledProps {
 }
 
 export interface InputProps {
-  onChange: () => void;
+  onChange: any;
   onKeyDown: () => void;
   value: string;
   type: string;
@@ -26,5 +47,5 @@ export interface InputProps {
 }
 
 export interface ListItemProps {
-text: string
+  text: string;
 }
