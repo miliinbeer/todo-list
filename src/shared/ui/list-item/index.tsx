@@ -8,7 +8,7 @@ export const ListItemWidget: FunctionComponent<ListItemProps> = ({ text }) => {
   return (
     <Root>
       <Items>
-        <CheckboxWidget />
+        <CheckboxWidget/>
         <Texts>{text}</Texts>
       </Items>
       <Buttons>
