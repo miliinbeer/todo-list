@@ -4,11 +4,11 @@ import { CheckboxWidget } from "../checkbox";
 import { ButtonWidget } from "../button";
 import { Root, Items, Texts, Buttons } from "./styles";
 
-export const ListItemWidget: FunctionComponent<ListItemProps> = ({ text }) => {
+export const ListItemWidget: FunctionComponent<ListItemProps> = ({ text, handleCheckbox }) => {
   return (
     <Root>
       <Items>
-        <CheckboxWidget/>
+        <CheckboxWidget onChange={handleCheckbox}/>
         <Texts>{text}</Texts>
       </Items>
       <Buttons>
