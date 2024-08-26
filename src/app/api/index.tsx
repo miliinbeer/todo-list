@@ -15,8 +15,16 @@ const rootReducer = createSlice({
       };
       state.data.push(todo);
     },
+    clearList: (state: StateTypes) => {
+      state.data = [];
+    },
+    toggleCompleted: (state: StateTypes, id: any) => {
+      state.data.map((el) =>
+        el.id === id ? { ...el, completed: !el.completed } : el
+      );
+    },
   },
 });
 
 export default rootReducer.reducer;
-export const { addTask } = rootReducer.actions;
+export const { addTask, clearList, toggleCompleted } = rootReducer.actions;

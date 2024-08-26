@@ -1,16 +1,12 @@
-import React, {
-  FunctionComponent,
-  ChangeEvent,
-  useState,
-} from "react";
+import React, { FunctionComponent, ChangeEvent, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { addTask } from "../../app/api";
+import { addTask, clearList, toggleCompleted } from "../../app/api";
 import { AppDispatch, DataTypes, StateDataTypes } from "../../shared/types";
 import { InputWidget } from "../../shared/ui/input";
 import { ButtonWidget } from "../../shared/ui/button";
 import { ListItemWidget } from "../../shared/ui/list-item";
-import { Root, Title, Items, List } from "./styles";
+import { Root, Title, Items, List, Buttons } from "./styles";
 
 export const Home: FunctionComponent = () => {
   const [value, setValue] = useState("");
@@ -23,9 +19,13 @@ export const Home: FunctionComponent = () => {
   };
 
   const addTodo = () => {
-    if (value.trim().length) {
-      dispatch(addTask({ text: value }));
-      setValue("");
+    const text = value[0].toUpperCase() + value.slice(1);
+    const isExist = data.find((el) => el.text === text);
+    if (!isExist) {
+      if (value.trim().length) {
+        dispatch(addTask({ text: text }));
+        setValue("");
+      }
     }
   };
 
@@ -38,7 +38,11 @@ export const Home: FunctionComponent = () => {
         <InputWidget
           props={{ $primary: true }}
           onChange={handleInput}
-          onKeyDown={() => {}}
+          onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
+            if (event.key === "Enter") {
+              addTodo();
+            }
+          }}
           value={value}
           type="text"
           placeholder="Введите вашу задачу"
@@ -49,11 +53,25 @@ export const Home: FunctionComponent = () => {
           children="Write"
         />
       </Items>
-      <List>
-        {data.map((el: DataTypes) => (
-          <ListItemWidget key={el.id} text={el.text} />
-        ))}
-      </List>
+      {data.length === 0 || (
+        <List>
+          {data.map((el: DataTypes) => (
+            <ListItemWidget key={el.id} text={el.text} />
+          ))}
+          <Buttons>
+            <ButtonWidget
+              props={{ $primary: true }}
+              onClick={() => {}}
+              children="Delete Selected"
+            />
+            <ButtonWidget
+              props={{ $primary: true }}
+              onClick={() => dispatch(clearList())}
+              children="Delete All"
+            />
+          </Buttons>
+        </List>
+      )}
     </Root>
   );
 };

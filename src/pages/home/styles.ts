@@ -22,3 +22,8 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 10px;
 `;
+
+export const Buttons = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;

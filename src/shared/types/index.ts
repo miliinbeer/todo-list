@@ -37,7 +37,7 @@ export interface InputStyledProps {
 
 export interface InputProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  onKeyDown: () => void;
+  onKeyDown: (event: React.KeyboardEvent<HTMLInputElement>)=> void;
   value: string;
   type: string;
   placeholder: string;
