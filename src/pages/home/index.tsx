@@ -56,7 +56,11 @@ export const Home: FunctionComponent = () => {
       {data.length === 0 || (
         <List>
           {data.map((el: DataTypes) => (
-            <ListItemWidget key={el.id} text={el.text} />
+            <ListItemWidget
+              key={el.id}
+              text={el.text}
+              handleCheckbox={() => {}}
+            />
           ))}
           <Buttons>
             <ButtonWidget
