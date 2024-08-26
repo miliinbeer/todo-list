@@ -46,4 +46,9 @@ export interface InputProps {
 
 export interface ListItemProps {
   text: string;
+  handleCheckbox: () => void;
+}
+
+export interface CheckboxProps {
+  onChange: () => void;
 }
